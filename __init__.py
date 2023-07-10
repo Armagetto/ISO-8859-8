@@ -31,3 +31,38 @@ def iso_8859_8_decoder(string: str):
     # other
     string = string.replace('&nbsp;', ' ')
     return string
+
+
+def iso_8859_8_encoder(string: str):
+    string = string.replace('א', '\\xe0')
+    string = string.replace('ב', '\\xe1')
+    string = string.replace('ג', '\\xe2')
+    string = string.replace('ד', '\\xe3')
+    string = string.replace('ה', '\\xe4')
+    string = string.replace('ו', '\\xe5')
+    string = string.replace('ז', '\\xe6')
+    string = string.replace('ח', '\\xe7')
+    string = string.replace('ט', '\\xe8')
+    string = string.replace('י', '\\xe9')
+
+    string = string.replace('ך', '\\xea')
+    string = string.replace('כ', '\\xeb')
+    string = string.replace('ל', '\\xec')
+    string = string.replace('ם', '\\xed')
+    string = string.replace('מ', '\\xee')
+    string = string.replace('ן', '\\xef')
+
+    string = string.replace('נ', '\\xf0')
+    string = string.replace('ס', '\\xf1')
+    string = string.replace('ע', '\\xf2')
+    string = string.replace('ף', '\\xf3')
+    string = string.replace('פ', '\\xf4')
+    string = string.replace('ץ', '\\xf5')
+    string = string.replace('צ', '\\xf6')
+    string = string.replace('ק', '\\xf7')
+    string = string.replace('ר', '\\xf8')
+    string = string.replace('ש', '\\xf9')
+    string = string.replace('ת', '\\xfa')
+    # other
+    string = string.replace(' ', '&nbsp;')
+    return string
